@@ -1133,7 +1133,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 53
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1319,13 +1319,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 614aaab2f2e97464bb7cf4b5b69defcd, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.643
+  m_Volume: 0.688
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 91
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1944,8 +1944,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 115.6, y: -22.969}
-  m_SizeDelta: {x: 223.20001, y: 118.29999}
+  m_AnchoredPosition: {x: 0.000061035156, y: -22.968994}
+  m_SizeDelta: {x: 107.6, y: 345.9}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &453221325
 MonoBehaviour:
@@ -1959,9 +1959,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b13d5ec5b2464aa4199b68350893c636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highScore: 0
   scoreValue: {fileID: 611194664}
   highScoreValue: {fileID: 453221326}
+  scoreTransform: {fileID: 611194663}
+  highScoreTransform: {fileID: 453221324}
 --- !u!114 &453221326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2418,9 +2419,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b13d5ec5b2464aa4199b68350893c636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highScore: 0
   scoreValue: {fileID: 611194664}
   highScoreValue: {fileID: 453221326}
+  scoreTransform: {fileID: 611194663}
+  highScoreTransform: {fileID: 453221324}
 --- !u!1 &638771735
 GameObject:
   m_ObjectHideFlags: 0

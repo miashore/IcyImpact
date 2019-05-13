@@ -5,8 +5,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour {
     public float minSpeed;
     public float maxSpeed;
-    float speed;
-    public int scorePoints = 10;
+    private float speed;
+    private int scorePoints = 10;
 
     Player playerScript;
 
