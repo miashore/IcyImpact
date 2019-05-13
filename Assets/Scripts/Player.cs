@@ -75,9 +75,9 @@ public class Player : MonoBehaviour {
         }
 
         // Once the skull falls a certain distance, destroys the object so it will not loop
-        // Shows the try again button to restart the game
         if (skull.transform.position.y <= -5.8) {
             Destroy (gameObject);
+            // Shows the try again button to restart the game
             tryAgainButton.SetActive (true);
         }
 
