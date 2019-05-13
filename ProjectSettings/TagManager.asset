@@ -16,6 +16,8 @@ TagManager:
   - Y
   - Flame
   - TryAgain
+  - ScoreValue
+  - HighScore
   layers:
   - Default
   - TransparentFX

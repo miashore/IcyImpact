@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour {
     public float minSpeed;
     public float maxSpeed;
     float speed;
+    public int scorePoints = 10;
 
     Player playerScript;
 
@@ -34,14 +35,25 @@ public class Enemy : MonoBehaviour {
         GameObject randomExplosion = explosions[Random.Range (0, explosions.Length - 1)];
 
         if (hitObject.tag == "Player") {
+            // Removes points, injures player 
+            ScoreManager.score -= scorePoints;
             playerScript.TakeDamage (damage);
+
+            // Destroys the instance and creates an explosion on impact
             Destroy (gameObject);
             Instantiate (randomExplosion, transform.position, Quaternion.identity);
         }
 
         if (hitObject.tag == "Ground") {
+            // Prevents the score from increasing after player dies and hazard hits the ground
+            if (playerScript != null) {
+                ScoreManager.score += scorePoints;
+            }
+
+            // Destroys the instance and creates an explosion on impact
             Destroy (gameObject);
             Instantiate (randomExplosion, transform.position, Quaternion.identity);
         }
     }
+
 }

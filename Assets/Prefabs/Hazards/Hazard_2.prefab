@@ -96,6 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSpeed: 10
   maxSpeed: 20
+  scorePoints: 10
   damage: 2
   explosions:
   - {fileID: 4143009906990302844, guid: 6394786f3d9adf24398c5c0da18afa69, type: 3}
