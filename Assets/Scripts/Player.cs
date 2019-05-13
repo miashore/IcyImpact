@@ -43,18 +43,21 @@ public class Player : MonoBehaviour {
     }
 
     private void Update () {
+        // Turns the moving animation on/off
         if (input != 0) {
             anim.SetBool ("isMoving", true);
         } else {
             anim.SetBool ("isMoving", false);
         }
 
+        // Flips the character left or right depending on the input
         if (input > 0) {
             transform.eulerAngles = new Vector3 (transform.position.x, 180, 0);
         } else if (input < 0) {
             transform.eulerAngles = new Vector3 (transform.position.x, 0, 0);
         }
 
+        // Triggers dashing animation and adds speed
         if (Input.GetKeyDown (KeyCode.Space) && isDashing == false) {
             anim.SetBool ("isDashing", true);
             speed += extraSpeed;
@@ -62,6 +65,7 @@ public class Player : MonoBehaviour {
             dashTime = startDashTime;
         }
 
+        // Turns the dashing animation off and slows the character
         if (dashTime <= 0 && isDashing == true) {
             anim.SetBool ("isDashing", false);
             isDashing = false;
@@ -70,6 +74,8 @@ public class Player : MonoBehaviour {
             dashTime -= Time.deltaTime;
         }
 
+        // Once the skull falls a certain distance, destroys the object so it will not loop
+        // Shows the try again button to restart the game
         if (skull.transform.position.y <= -5.8) {
             Destroy (gameObject);
             tryAgainButton.SetActive (true);
@@ -86,6 +92,7 @@ public class Player : MonoBehaviour {
         // Moving player
         rb.velocity = new Vector2 (input * speed, rb.velocity.y);
 
+        // Stops the player upon death
         if (health <= 0) {
             rb.velocity = new Vector2 (0, rb.velocity.y);
         }
@@ -103,6 +110,7 @@ public class Player : MonoBehaviour {
         if (health <= 0) {
             deathSound.Play ();
             anim.SetBool ("isDead", true);
+            // Hides the flame game object that is part of the character
             flame.SetActive (false);
         }
     }

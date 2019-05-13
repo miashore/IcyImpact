@@ -180,6 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSpeed: 5
   maxSpeed: 15
+  scorePoints: 10
   damage: 1
   explosions:
   - {fileID: 1429638518907193648, guid: 61098d0495fe7a84082bb3e21a925020, type: 3}
@@ -247,7 +248,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 152
+  Priority: 104
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
